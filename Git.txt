@@ -1,0 +1,9 @@
+Jenkins
+
+Integration:
+
+Plan --> coding(git) -->continuous Integration[code review,unittest,code coverage --> packaging war/jar] --> continuous delivery[Deployement dev ,test,preprod,prod]
+
+
+earlier processs--> we used to work in single integration in multiple months.Now we are having multiple integration in single months.Every single feature is going to be
+complied ,review ,Tested ,covered and packaged. Every single minor is going to compiled and reviewed.

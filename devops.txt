@@ -1,0 +1,371 @@
+Day 1:
+
+Waterfall SDLC :you cant go back one stage to previous stage without paying anything.it will cost you more.this is most popular and reliable method 
+
+
+
+customer:ABC
+service company : XYZ -> develop s/w web app
+
+phase of entire project life cycle
+1.requirement gathering/analysis ->XYZ company will talk to ABC customer and agree on what the requirement is and what we are going to deliver.so the entire expectation ,the time duration in for which the project going to run ,the scope of the project ,money everything.once the requirement gathering done ,there will be agreement and documentation part and it will be signed by both customer and company.
+
+2.Design ->This will be done by architect and stakeholder,seat together and design the product.which programming langauge to use,what will be the architecture of this entire application,what are the various component,how many teams will work,how many devlopers we require.all those decision will be taken care .At the end of this,the document will generated that is design document. based on this design document the team will start implementation.
+
+3.Implementation -> Now devlopers will code to get this design and functionality.then they will code and give it to the testing team to test . now testing team will test the code and verify and give the result to coders. so the devloper and testing team will work together to devlope the application during this entire implemantation phase.
+So end of this implemenation the test team will verify the application is devloped as per the agreement and they will give there result as OK.once it is done the product will release.
+end of this phase ,we will have release artifact.it could be your web application , binaries.
+
+4. Released /deployed -here we deliver the product to customer.
+===========================================================
+
+
+Agile SDLC:scrum
+
+cutomer provides the requirements list like login page , cart ,menu ,3D etc.
+
+In agile , company will work with 5 devloper.
+
+first two weeks (sprint 1): first it will pick 3 requirement and start working on it.
+analysis ->code -> test -> build -> release ->demo.
+
+next two weeks (sprint 2): it taken rest three requirement and start working on it.
+analysis ->code -> test -> build -> release ->demo.
+
+this two -two weeks duration call "Sprint".
+
+In agile,customer can change there requirement during this sprint.they dont have to stick to there requirement. Here you release in every two weeks or three weeks.In waterfall
+
+==============================================================================
+Devops:
+
+customer: gives there 10 requirement like R1 ,R2 .............R10.
+
+Company :have 3 devlopers.
+
+Now , here devlopers 1 ,2 & 3 will pick the top 3 requieremnt and and first D1 finish the requierement R1 and release it. and then he will pick the R4 and started working. and the same thing will continue with D2 and D3. once they finish the requierment they will release it and  pick the next Requirement.
+You dont have to wait for others to finish the requirements.
+
+
+
+
+
+==============================================================================
+Q. Agile and Scrum both are same?
+Ans: Scrum is one of the implementation of agile.Agile is the framework which define some ground rules and then you build your software devlopement on the top of that. So there is scrun . other type of agile like Safe , kanban.So Scrum is one of the method of implementing agile.
+
+Q.Can we make changes in sprint 1 if we already done the release and started working in sprint 2.?
+Ans: You can only start working in sprint 2 once you released sprint 1.
+
+Q.After releaseing there wont be any chnages.?
+
+Ans:So , if the sprint 1 is released already and sprint 2 we have started working. now if customent want to make any changes after demo or release. They have to come up with new requirement . and we can work on it in future sprint 3 or you can undo few features.So it will future devlopement for any undo, modification ,addtion anything.
+
+Q.Change management happened after the sprint?
+Ans: Yes, during the sprint you dont do any modification. once the sprint completed then only can do any changes.
+
+Q.How do we achieve this continuous release in devops?What happened during deployement?
+
+Ans: So generaly devloper team devloped the product and handover to ops team to deploye it in identify environment.Here in devops as continuous release happening ,Ops team cant make changes everytime in the environment .they will fail as deployement is not that easy.As the infrastructure should be stable evrytime.
+But devloper team want to make the changes. So here we get DEVOPS team.
+
+>>Agile is for devlopement and Devops is for Deployement.
+>>Devops does not solve any agile problem but it helps to devlopement team to perform there devlopemnet/deplyoment in agile.
+
+====================================================================================================================================
+
+Day 2:
+
+VCS - Version control system
+CI -continouus integration
+CT - continuous testing
+CD -continuous deployement
+continuous monitoring
+configuration management
+
+1.Version control system :- 
+Suppose there is source code file which contain sets of files like java files.many files are there and there is 4 devloper and all are working on those files.So here we want to enable colaboration,tracking to know the changes happening in the piece of code.To achieve this we have VCS.
+VCS allow you to manage on going devlopement on your source code.
+Suppose day 0 Devloper A make the changes in code and then again day 3 Devloper B make the changes again in the code . So we have all the history of changes like who ?when ? and why ? the changes happend in the code. So version control make sure there is no overwrite in the changes which is done by devloper A.
+
+GIT is the most expected VCS in market.Git is a version control system that lets you manage and keep track of your source code history.It installed locally.
+
+
+2. continouus integration:-
+
+Suppose we have GIT and 4 devlopers working on the source code. so who wil validate those changes which is done by devlopers.So we have CI for that.
+when a change done by one devloper. that chnage will submit for basic validation.
+so this basic validation will happen in pipeline as below.
+compilation (maven tool)-> code quality check (sonaqute tool)-> unit test (junit).
+
+3. continuous testing :-Validation of product against customer requirement. where we deploye to the test environment and then perform Test.
+
+4. continuous deployement :- Deploye to the live production.
+
+CI =basic validation
+CT =CI + Tests
+CD =CT +Deployement
+
+Any stage of the pipeline fail. You stop there and not continue to the pipe line. and every step we provide the feedback.
+
+==================================================================================================================================
+Q. what is code quality and unit test?  
+ Unit test - all the functionality of the code .unit  test deals with bugs.that could be introduce in the code .like division by 0 . 
+code quality - it checks how the code is written.if you enough comments , ur code statement is too longs. too many if else is there in code.
+
+Q.What is GitHub?
+Ans:-GitHub is a web-based repository management hosting service and the largest source code repository in the world that brings together the largest community of developers under one roof to collaborate on software development projects
+Difference between GitHub and GitLab
+
+Q.Basic difference in Github and GitLab?
+Ans:- Both GitHub and GitLab are web-based Git repository hosting service that track changes in the software development projects and its files over time allowing developers to collaborate on web projects under one roof. Like GitHub, GitLab is a repository manager for collective collaboration but with a more intuitive UI and its branch protection, permissions, and authentication features are what make GitLab stand out.
+
+Q, When we do CD,who is making sure that the functional test cover all the requirements ,of software specification does there some any change management team will invole ?
+Ans:-
+
+
+Q.Deployement vs delivery?
+Ans:  We create the software and do all the testing as per requirement and DELIVER it to the customer and ask the to deploye it .
+
+Q.Kubernative vs dockers?
+Ans: Kubernative gives u an environment, orchestration cluster based environment  where  u can run docker based application.
+
+
+
+====================================================================================================================================
+
+1.Version control system :-
+
+ a. Local VCS  --> SCCM tool - waterfall model -> We can save and changes everything in our local machine. File sharing was difficult and single point failure chances was high.
+
+ b. centralized VCS  - SVN tool --> We ca save the data centralized and make the changes in our local machine by cloning the data in our local machine.But still the single point failure is there because all the version of the code is not there in local machine.So if any disaster happen to the remote repository ,we will loss the data/version.
+
+ c. Distributed VCS --> GIT  --> We can share the code very efficiently with all and this will eliminate the single point failure .Because whenever the devloper is going to clone the code by default he will clone all the version of the code. 
+
+There can be code conflict in master (remote repository) .To avoide this we have rebasing.
+
+Branches let you work with multiple versions of the source code in the same local Git repository at the same time.
+
+A feature branch is simply a separate branch in your Git repo used to implement a single feature in your project
+A branch is an isolated version of the code that you can work on offline without impacting other developers on your team. A branch would typically be for a new feature or a defect fix. Commit changes to your branch locally. You can keep track of your commit history locally while you work.
+
+
+https://github.com/lerndevops/labs
+
+
+-------------------------
+
+
+==================================================
+VCS (Version control system) or SCM (source code management) --> There are three type:  LOcal VCS , Centralised VCS and Distributed VCS.
+
+Local VCS --> sccs
+You work on local machine and maintain all the version in same machine.It is watertfall model .single point failure and code sharing issue.
+
+Centralized VCS -->SVN
+we can maintain all the version in centralised version control system.so code sharing is possible in this VCS but single point of failure still persist .coj the if the centralised /remote repository goes down we can get the latest version from local repository which is shared to devloper but we can not get the previous version.
+
+if you want to roll back to your previous version. you can get the code from remote repository .Code sharing is easy now in centralised VCS. 
+ex- Suppose we have something in google cloud. from there we can share the things with other devloper to there local machine/repository. 
+there is two way of going back to the previous version . 1. Removing the version from history then have the latest version the previous. 2. roll back to the previous version.
+
+Disributed VCS -->GIT
+Here any devloper who wants to clone the code from remote repository to local repository. they will clone all the version of code.this is called distributed VCS.Everthing you will have in your local system. Now we have eliminated the single point of failure issue.We can rebuild our remote repo in case it goes down.
+
+
+Q.Will it increase disk usase everywere?
+Ans:- yes.but not really. Because we will have backup strategy here. Full and incremental. First backup will be full and rest all will have incremental.
+
+touch 1.java   --> to create a empty file
+git status  --> it will show all the things happen in git branch
+git ls-files   --> it will show the files wch are added in git
+
+git add .   --> it will add all the untrack file
+git add filename  --> it will add the file in git.
+git commit -m "added 1.java"  --> to commit the file
+git log --> it will provide the details about the versioning by git
+git config --global user.name pooja
+git config --global user.email pooja@xyz
+git config --global --list   --> to show the config we have done
+.gitignore  --> to ignore the file wch u dont want to commit in Git
+
+git log --oneline  --> to get shorter output, to show all the commit ids
+
+git show commitID-->to show what exactly happen in wch commit it
+
+git diff  --> to show the difference between the commit id
+
+git diff first_comit_id last_comit_id --> it will list 
+
+git log -p filename --> this file is part of wich all commit ids.
+
+git tag -a v1.0 commit_ID -m "v1.0" --> To tag into the commit id
+
+git show v1.0 --> it will show you the details about that tag commit id
+
+git diff v1.0 v1.1 --> it will show the difference between tags
+=========================================
+how to deleted file from git repo :-
+ex:- 
+touch 5.java
+ls -ltr
+git ls-files
+git add .
+git commit -m "added 5.java"
+git log 
+
+now remove it: 1st way
+
+rm 5.java
+ls -ltr  (file has been removed from local repo)
+git ls-files(file is still available in git repo)
+git status
+git add .   --> saving ur changes in git local repo
+git status
+git commit -m "deleted 5.java"
+
+========================================
+
+now remove it: 2nd way
+
+git rm 5.java  --> it will from local repo as well as git repo
+
+git commit -m "deleted 5.java"
+
+========================================
+
+now to add the deleted file :
+
+git status
+
+git reset --soft commit_ID  --> it will go to that commit_ID where you want to go and it will remove the rest top/above commit IDs.it will remove from history for ever. it will go back to your staging area.
+
+git reset --hard commit_ID --> it will remove the file from local repo as well as working directory.
+
+git log --oneline --> move back to the previoud commit id
+
+git status --> 5.java file is in deleted state.
+
+ls -ltr  --> file is not visible in repo
+
+git ls-files --> file is not listed in git repo as well
+
+git restore --staged 5.java  --> now we will restore the file to git repo.
+
+git reset --hard commit_ID --> it will remove the file from local repo as well as working directory.
+
+git revert commit_ID --> it will revert backup to the changes. and then use git reset.it will go to previous version and it will generate a new commit id.it will have new history.
+
+git remote add origin repo_link --> to add our repo to git.here origin is user define name. it can be ur name or xyz 
+
+git remote -v  --> it will show that the repo is added or not
+
+git branch -M main --> it will create new branch. it will rename the branch master to main 
+
+git branch -> it will show you the branch name
+
+git push -u origin master(branch_name)
+
+git fetch --> only tells you if there is any difference between ur remote repo n local repo
+
+git merge --> it will merge the difference in local repo from remote repo
+
+git pull -->  tells you if there is any difference between ur remote repo n local repo and also it will merge the difference in local repo (git fetch + merge)
+
+git branch defect -->creating a different branch 
+
+git branch -> it will show that u are belongs to wch branch now
+
+git checkout defect --> it will switch branch
+
+git rebase master --> rebasing ->Rebasing is the process of moving or combining a sequence of commits to a new base commit. Rebasing is most useful and easily visualized in the context of a feature branching workflow.
+
+git branch -D defect  --> to delete the branch from local repo.
+
+
+>>release branch is there so that we could paralelly devloped in the devlopement branch and release branch is approved changes to relaese changes in master.
+
+https://github.com/lerndevops/labs
+
+https://github.com/lernwithshubh/purdue
+
+https://github.com/shubhsharma009
+
+https://gitlab.com/shubh.sharma008/purdue
+
+https://drive.google.com/file/d/1C4lZ94gxTbGXpKPB7IDiVyrUVQ0TD7og/view?usp=sharing
+
+https://github.com/lerndevops/samplejavaapp  --application jenkins
+
+https://github.com/lerndevops/labs/blob/master/jenkins/Jenkins-Setup-CI.txt
+
+======================================================
+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
+
+Github token
+
+Purpose of git is maintain the versioning.menas If you have version control system and some file on your system or code repository it should track all the changes.even if you make slietly chnage in file or linux environment it should capture that. If git is going to maintain versioning all every single chnages.Its going to be tough . So in this case we are going to code in specific folder. we need to create a directory first and start writing my application code files in that directory.and where we are going to start working with your code that is called your "work space".
+and acknowledge this place by "git init".  we need to tell git that this is the location where i am going to writer my code and you should maintain the verioning of that code.
+
+There is three workspace:
+1.Working directory (once the file is in WD ,git is not aware of these file) - untracked file
+2.stanging (once you do git add filename ,git will aware that files are present) -tracked files
+3. commit (once you commit the files ,git will create a versioning to maintain it)
+
+================================================
+sudo su -
+1.sudo apt-get install software-properties-common  --> First install the software properties. prerequsite
+2.sudo add-apt-repository ppa:git-core/ppa -y --> Add gitcode repository to instance
+3.sudo apt-get update  --> update the repo and repository available in instance
+4.sudo apt-get install git -y  --> install the git in instance
+5.git --version ( if it writes the version then the installation is successful )
+
+==============================
+git --version --> to check version
+mkdir dev1
+ls -ltr
+cd dev1/
+git init
+pwd  --> give path of your current directory
+ls -ltra --> give the hidden directory in current directory
+git branch - tells you which branch you are working
+git ls-files - tells you which files are part of your git
+git status - tell you evrything
+touch 1.java - to create a file
+git add 1.java - to tell git that the 1.java will added as local repository/and git is aware about this file .now we need to mantain the versioning.
+git commit -m "added 1.java"  - its has been commited
+git log --> tells you the versioning ,contain date ,time ,commit id
+git show commit id --> tell about commit id ,what happened exactly
+git diff commit1 commit 2 --> tells you the difference between the commit id
+git log -p filename -> it will tell the files belong which all commit id
+git tag -a v1.0 commitID -m "msg"
+git show v1.0
+git diff v1.0 v1.1
+git reset --soft commitid --> it will go backk to stage area.
+git restore --staged filename --? it will go to WD from stageing area. to which commit id we want to go.
+
+git reset --hard commitID ---> it will go backk to WD area.
+git revert commitid --> from where we want to revert.
+
+
+
+
+=======================================
+https://github.com/settings/tokens - github
+
+
+=======================================================
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
